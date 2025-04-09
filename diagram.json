@@ -1,0 +1,26 @@
+{
+    "version": 1,
+    "author": "Hùng Anh Nguyễn",
+    "editor": "wokwi",
+    "parts": [
+      { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+      { "type": "wokwi-led", "id": "led1", "top": -90, "left": -34.6, "attrs": { "color": "red" } },
+      {
+        "type": "wokwi-relay-module",
+        "id": "relay1",
+        "top": 137.4,
+        "left": 320.4,
+        "rotate": 270,
+        "attrs": {}
+      }
+    ],
+    "connections": [
+      [ "uno:5V", "relay1:VCC", "red", [ "v58.1", "h214.4" ] ],
+      [ "relay1:GND", "uno:GND.2", "black", [ "h0" ] ],
+      [ "relay1:COM", "uno:3.3V", "green", [ "h0" ] ],
+      [ "relay1:IN", "uno:2", "green", [ "v9.6", "h-157.3" ] ],
+      [ "led1:A", "relay1:NO", "green", [ "v0" ] ],
+      [ "led1:C", "uno:GND.1", "green", [ "v0" ] ]
+    ],
+    "dependencies": {}
+  }
